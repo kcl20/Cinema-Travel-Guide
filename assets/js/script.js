@@ -26,6 +26,7 @@ function getLocationAPI() {
 
 
 function validateLocation () {
+    event.preventDefault();
     var locationInput = document.getElementById("location").value;
     console.log("location = " + locationInput);
 
