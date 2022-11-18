@@ -1,6 +1,7 @@
 var button = document.getElementById("submit");
 var searchResultsURL = './searchresults.html';
 var locationInput = document.getElementById("location").value;
+var formEl = document.getElementById("location-form");
 
 button.addEventListener('click', validateLocation);
 
@@ -31,13 +32,15 @@ function validateLocation () {
     console.log("location = " + locationInput);
 
     if (locationInput === "") {
-        alert("Please enter a location");
         console.log("empty location");
+        var emptyLocationEl = document.createElement("div");
+        emptyLocationEl.textContent = "Please enter a location";
+        formEl.append(emptyLocationEl);
  
     } else {
         console.log("location is not empty");
-    redirectSearchResults();
-
+        redirectSearchResults();
+        localStorage.setItem("location", locationInput);
     }
 
 }
