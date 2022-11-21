@@ -1,10 +1,8 @@
+
 <!DOCTYPE HTML>
 <html>
 <html lang="en">
 <head>
-
-  <link rel="stylesheet" href="./assets/cs/reset.css">
-  <link rel="stylesheet" href="./assets/cs/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Weather App</title>
     <meta charset="UTF-8">
@@ -14,7 +12,26 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
         <script src="https://kit.fontawesome.com/85e642a982.js" crossorigin="anonymous"></script>
+          <link rel="stylesheet" href="./assets/cs/reset.css">
+  <link rel="stylesheet" href="./assets/cs/style.css">
 
+</head>
+
+<body>
+  <div class="section__title--intro">
+    <h2 class="title">
+      Cinema Travel Guide
+      </h2>
+  </div>
+ 
+  <h2 class="Subtitle">Enter a place you would like to travel to..</h2>
+  <fieldset class="fieldset"> 
+  <form id="user-form" class="card-body">
+      <label class="form-label" for="location">Enter a place</label>
+      <input name="location" id="location" type="text" autofocus="true" class="form-input" />
+      <button type="submit" class="btn" id="submit">Submit</button>
+    </form>
+  </fieldset>  
 </head>
 <body>
   
@@ -28,9 +45,8 @@
       <button type="submit" class="btn" id="submit">Submit</button>
     </form>
  
-
 </body>
-
-
 <script src="./assets/js/script.js"></script>
 </html>
+
+
