@@ -1,65 +1,34 @@
+var errorMessageEl = document.getElementById("errorMessage");
 var button = document.getElementById("submit");
-// var searchResultsURL = './searchresults.html';
-var locationInput = document.getElementById("location").value;
 
-// var formEl = document.getElementById("location-form");
-
-// button.addEventListener('click', validateLocation);
-button.addEventListener('click', getMovies)
+button.addEventListener('click', validateLocation);
 
 
-// function getLocationAPI() {
-//     console.log(locationInput);
+// check if input field has value
+function validateLocation () {
+    event.preventDefault();
 
-//     var geoCodeURL = 'http://api.openweathermap.org/geo/1.0/direct?q=' + locationInput + '&appid=ef3b94b9a879496a00fc76e964164432';
+    var locationInput = document.getElementById("autocomplete_search").value;
+    console.log("location = " + locationInput);
 
-//     fetch(geoCodeURL).then(function (response) {
-//         if (response.ok) {
-//             console.log("Sucess!");
-//             response.json().then(function (data) {
-//                 console.log(data);
-//                 getWeatherAPI(data[0].lat, data[0].lon);
-//             });
-//         } else {
-//             alert('Error: ' + response.statusText);
-//         }
-//     })
+    if (locationInput === "") {
+        console.log("empty location");
+        // Change class of error message to display.
+        document.getElementById("errorMessage").className = "errorMessageShow";
+        
+     } else {
+        console.log("location is not empty");
+        // save the location to local storage and redirect to search results page
+        localStorage.setItem("location", locationInput);
+        redirectSearchResults();
+    }
+}
 
 
-// }
 
-
-// function validateLocation () {
-//     event.preventDefault();
-//     var locationInput = document.getElementById("location").value;
-//     console.log("location = " + locationInput);
-
-//     if (locationInput === "") {
-//         console.log("empty location");
-//         var emptyLocationEl = document.createElement("div");
-//         emptyLocationEl.textContent = "Please enter a location";
-//         formEl.append(emptyLocationEl);
- 
-//     } else {
-//         console.log("location is not empty");
-//         redirectSearchResults();
-//         localStorage.setItem("location", locationInput);
-//     }
-
-// }
-
-function redirectSearchResults (locationInput) {
-    console.log(locationInput)
-    var searchResultsURL = './searchresults.html';
+function redirectSearchResults () {
+    var searchResultsURL = './searchresults.html' + '?location=' + localStorage.getItem("location");
     console.log("redirecting");
     document.location.replace(searchResultsURL);
-    // getLocationAPI();
 }
 
-function getMovies(locationInput) {
-    event.preventDefault();
-    var locationInput = document.getElementById("location").value;
-    // localStorage.setItem('location', locationInput)
-    // console.log(locationInputRecall)
-    redirectSearchResults(locationInput);
-}

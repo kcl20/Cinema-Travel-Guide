@@ -37,9 +37,7 @@
 
 
 body {
-
 background-color: grey;
-
 }
 
 
@@ -80,19 +78,25 @@ justify-content: center;
   background-color: var(--clr-accent);
   display: inline-block;
   align-self: center;
-
 }
 
 .form-label {
 font-family: var(--ff-primary);
-
 }
 
 .input {
 display: flex;
 justify-content: center;
+}
 
+.errorMessageShow {
+  display:block;
+  text-align: center;
+  color: red;
+}
 
+.errorMessageHide {
+  display:none;
 }
 
 /*Search page CSS*/ 
@@ -109,11 +113,9 @@ justify-content:end;
 flex-direction: row;
 }
 
-
 .btn1 {
 display: flex;
 justify-content: right;
-
 }
 
 .weather_pop {
