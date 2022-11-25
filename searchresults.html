@@ -15,38 +15,53 @@
  <h1 id="title"></h1>  
  </div>
 
+ <section class="weather">
+    <div class="weather_card">
+    <h3 id="currentWeather">Current Weather</h3>
+    <p id="weatherDescription">Sunny</p>
+    <p id="currentTemperature">Temperature: 40 degrees C</p>
+    <p id="currentHumidity">Humidity: 89% humidity</p>
+    <p id="currentWindSpeed">Windspeed: 3 kpm/h</p>
+    </div>
 
- <div class="btn1"> 
- <a href="index.html"><button class="btn1" onclick="history.back()">Go Back</button></a>
-</div>
-<section class="movies">
-<div class="movie-0" id="movie-0">
-<a id="movie-link" href="">IMDB Movie Link</a>
-<p id="modal-description-movie1"></p>
-
-</div>
-
-<div class="movie-1" id="movie_1">
-<a id="movie-link2" href="">IMDB Movie Link</a>
-<p id="modal-description-movie2"></p>
-
-</div>
-
-
-<div class="movie-2" id="movie_2">
-<a id="movie-link3" href="">IMDB Movie Link</a>
-<p id="modal-description-movie3"></p>
-
-</div>
 </section>
 
-<section class="weather">
-<div class="weather_pop">
-<box> 
-<h3>Sample weather</h3>
-</box>
+<div class="movies" style="border:1px solid; background-color:aliceblue">
+
+        <div class="movie-1 movieCards" id="movie_1">
+            <a id="movie-link2" href="">IMDB Movie Link</a>
+            <p id="modal-description-movie2"></p>
+        </div>
+
+        <div class="movie-2 movieCards" id="movie_2">
+            <a id="movie-link3" href="">IMDB Movie Link</a>
+            <p id="modal-description-movie3"></p>
+        </div>
+
+        <div class="movie-0 movieCards" id="movie-0">
+            <a id="movie-link" href="">IMDB Movie Link</a>
+            <p id="modal-description-movie1"></p>
+        </div>
+
 </div>
-</section>
+
+<div class="backBtn"> 
+    <a href="index.html"><button class="btn1" onclick="history.back()">Go Back</button></a>
+    </div>
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 <script src="./assets/js/searchresults.script.js"></script>
 </html>

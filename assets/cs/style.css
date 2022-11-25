@@ -82,6 +82,7 @@ justify-content: center;
 
 .form-label {
 font-family: var(--ff-primary);
+margin-right: 1em;
 }
 
 .input {
@@ -99,6 +100,29 @@ justify-content: center;
   display:none;
 }
 
+.countriesContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.countriesCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border: solid 3px black;
+  margin: 1em;
+  padding: 1em;
+  background-color: var(--clr-light);
+
+}
+
+
 /*Search page CSS*/ 
 
 .search_title {
@@ -113,20 +137,40 @@ justify-content:end;
 flex-direction: row;
 }
 
-.btn1 {
-display: flex;
-justify-content: right;
+.backBtn {
+margin-top:2em;
+float: right;
 }
 
-.weather_pop {
+.weather {
+  display: flex;
+  /* Defines how to distribute the empty space between child elements */
+  justify-content: center;
+  padding: 60px;
+  background: #13293d;
+  color: #fff;
+  }
+
+.weather_card {
 box-sizing: content-box;
 display: flexbox;
 border: var(--clr-accent);
+justify-content: center;
 }
 
-.weather_pop {
-display: flex;
-justify-content:flex-end;
-border: solid 3px black;
-display: inline-block;
+.movies {
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  flex-wrap: wrap;
+  align-content: space-around;
+  
+}
+
+.movieCards {
+background:#16e0bd;
+display: flexbox;
+border: var(--clr-accent)
+padding: 1em 2em;
+flex: 0 1 200px;
 }
