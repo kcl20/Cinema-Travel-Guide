@@ -32,3 +32,27 @@ function redirectSearchResults () {
     document.location.replace(searchResultsURL);
 }
 
+
+var Spain = document.getElementById("Spain");
+Spain.addEventListener('click', function() {
+    localStorage.setItem("location", "Spain");
+    redirectSearchResults();
+});
+
+var India = document.getElementById("India");
+India.addEventListener('click', function() {
+    localStorage.setItem("location", "India");
+    redirectSearchResults();
+});
+
+var Mexico = document.getElementById("Mexico");
+Mexico.addEventListener('click', function() {
+    localStorage.setItem("location", "Mexico");
+    redirectSearchResults();
+});
+
+var Japan = document.getElementById("Japan");
+Japan.addEventListener('click', function() {
+    localStorage.setItem("location", "Japan");
+    redirectSearchResults();
+});
