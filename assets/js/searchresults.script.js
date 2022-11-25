@@ -86,10 +86,72 @@ function getIMDB(imdbIDs) {
                 return response.json();
             })
             .then(function (data) {
-                console.log(data);
+                // console.log(data);
             });                    
     }
+    getMovie1Info(imdbIDs);
+    getMovie2Info (imdbIDs);
+    getMovie3Info (imdbIDs)
 }
 
+function getMovie1Info (imdbIDs) {
+    var requestMovie1PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[0] + "&full&apikey=dacedb99"
+    
+    fetch(requestMovie1PlotUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                // console.log(data);
+                var moviePlot = data.Plot
+                var imdbRating = data.imdbRating
+
+            var movie1Info = [];
+            movie1Info.push(moviePlot)
+            movie1Info.push(imdbRating)
+
+            console.log(movie1Info)
+            });
+}
+
+function getMovie2Info (imdbIDs) {
+    var requestMovie2PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[1] + "&full&apikey=dacedb99"
+    
+    fetch(requestMovie2PlotUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                // console.log(data);
+                var moviePlot = data.Plot
+                var imdbRating = data.imdbRating
+
+            var movie2Info = [];
+            movie2Info.push(moviePlot)
+            movie2Info.push(imdbRating)
+
+            console.log(movie2Info)
+            });
+}
+
+function getMovie3Info (imdbIDs) {
+    var requestMovie3PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[2] + "&full&apikey=dacedb99"
+    
+    fetch(requestMovie3PlotUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                // console.log(data);
+                var moviePlot = data.Plot
+                var imdbRating = data.imdbRating
+
+            var movie3Info = [];
+            movie3Info.push(moviePlot)
+            movie3Info.push(imdbRating)
+
+            console.log(movie3Info)
+            });
+}
 // initialize function to lookup movies via API
 getMovies();
