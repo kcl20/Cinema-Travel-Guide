@@ -2,8 +2,8 @@ var pageTitle = document.getElementById("title");
 pageTitle.textContent = "Showing results for " + localStorage.getItem("location");
 
 var movieEl0 = document.getElementById("movie-0")
-var movieEl1 = document.getElementById("movie_1")
-var movieEl2 = document.getElementById("movie_2")
+var movieEl1 = document.getElementById("movie-1")
+var movieEl2 = document.getElementById("movie-2")
 
 
 
@@ -78,20 +78,20 @@ function getIMDB(imdbIDs) {
 
     
 
-    for (var i = 0; i < imdbIDs.length; i++) {
-        var requestIMDBUrl = "http://www.omdbapi.com/?i=" + imdbIDs[i] + "&apikey=dacedb99"
+    // for (var i = 0; i < imdbIDs.length; i++) {
+    //     var requestIMDBUrl = "http://www.omdbapi.com/?i=" + imdbIDs[i] + "&apikey=dacedb99"
         
-        fetch(requestIMDBUrl)
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                // console.log(data);
-            });                    
-    }
+    //     fetch(requestIMDBUrl)
+    //         .then(function (response) {
+    //             return response.json();
+    //         })
+    //         .then(function (data) {
+    //             // console.log(data);
+    //         });                    
+    // }
     getMovie1Info(imdbIDs);
-    getMovie2Info (imdbIDs);
-    getMovie3Info (imdbIDs)
+    getMovie2Info(imdbIDs);
+    getMovie3Info(imdbIDs)
 }
 
 function getMovie1Info (imdbIDs) {
