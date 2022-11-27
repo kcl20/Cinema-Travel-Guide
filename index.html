@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 <html lang="en">
@@ -16,23 +15,28 @@
 </head>
 
 <body>
-  <div class="section__title--intro">
-    <h2 class="title">
+
+  <video id="background-video" autoplay loop muted poster="/assets/images/beach travel screengrab.png">
+    <source src="/assets/images/Pexels Videos 1854202.mp4" type="video/mp4">
+    </video>
+
+  <div>
+    <h2 class="home-title">
       Cinema Travel Guide
       </h2>
   </div>
  
-  <h2 class="Subtitle">Enter a place you would like to travel to..</h2>
+  <h2 class="home-subtitle">Enter a country you would like to travel to...</h2>
+
   <div class="input">
     <fieldset class="fieldset"> 
     <form id="location-form" class="card-body">
-        <label class="form-label" for="location">Enter a place </label>
+        <!-- <label class="form-label" for="location">Enter a place </label> -->
         <!-- <input name="location" id="location" type="text" autofocus="true" class="form-input" /> -->
 
         <input id="autocomplete_search" name="autocomplete_search" type="text" class="form-control" placeholder="Search" />
         <!-- <input type="text" name="type" id="changetype-cities" />
         <label for="changetype-cities">(cities)</label> -->
-
         <!-- <input type="hidden" name="lat">
         <input type="hidden" name="long"> -->
 
@@ -46,32 +50,32 @@
     Please enter a location.
   </div>
 
-<div class="countriesContainer">
-  <div class="countriesCards" id="Spain">
-    <img src="assets/images/spain-pexels-alex-staudinger-1731826.jpg" alt="Spain" class="countriesImg">
-    <p>Spain</p>
+  <div class="countriesContainer">
+    <div class="countriesCards" id="Spain">
+      <img src="assets/images/spain-pexels-alex-staudinger-1731826.jpg" alt="Spain" class="countriesImg">
+      <span>Spain</span>
+    </div>
+    <div class="countriesCards" id="India">
+      <img src="assets/images/india-pexels-jeswin-thomas-1007426.jpg" alt="India" class="countriesImg">
+      <span>India</span>
+    </div>
+    <div class="countriesCards" id="Mexico">
+      <img src="assets/images/mexico-pexels-bruno-cervera-12316510.jpg" alt="Mexico" class="countriesImg">
+      <span>Mexico</span>
+    </div>
+    <div class="countriesCards" id="Japan">
+      <img src="assets/images/japan-pexels-belle-co-402028.jpg" alt="Spain" class="countriesImg">
+      <span>Japan</span>
+    </div>
   </div>
-  <div class="countriesCards" id="India">
-    <img src="assets/images/india-pexels-jeswin-thomas-1007426.jpg" alt="India" class="countriesImg">
-    <p>India</p>
-  </div>
-  <div class="countriesCards" id="Mexico">
-    <img src="assets/images/mexico-pexels-bruno-cervera-12316510.jpg" alt="Mexico" class="countriesImg">
-    <p>Mexico</p>
-  </div>
-  <div class="countriesCards" id="Japan">
-    <img src="assets/images/japan-pexels-belle-co-402028.jpg" alt="Spain" class="countriesImg">
-    <p>Japan</p>
-  </div>
-</div>
-
-
-
-
+  
 </body>
 
-
-
+<footer>
+  Images provided by <a href="https://www.pexels.com">
+    <img src="https://images.pexels.com/lib/api/pexels-white.png" />
+  </a>
+</footer>
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9SWeWb3WpflC14QDLJBSmsLEl1OGmIMg&libraries=places"></script>
          
