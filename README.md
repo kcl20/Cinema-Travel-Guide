@@ -33,21 +33,20 @@ N/A
 
 ## Usage
 
-# --INSERT COMPLETED SCREENSHOTS
-
 When you open the app, you will find yourself on a search page. On this page, you have one of two choices:
 1) you can either choose a pre-selected destination, or 
 2) you can type in a destination of your choice. 
 
-![Screenshot](IMAGE OF SEARCH PAGE)
+![Screenshot](assets/images/homepage.png)
+![Screenshot](assets/images/search-bar.png)
 
 Once you click “search”, you will see the current weather of your chosen location, as well as, find a list of the top three movies, that has that country name in it. 
 
-![Screenshot](IMAGE OF weather and movies)
+![Screenshot](assets/images/searchresults-page.png)
 
 In the display, you will be led to simply the movie, with it's release date, along with a button that will, open a modal which include the plot of the movie, along with its IMDB rating. 
 
-![Screenshot](IMAGE OF MODAL)
+![Screenshot](assets/images/modal-example.png)
 
 ## Credits
 
@@ -66,21 +65,24 @@ The following API's were used in the creation of this app:
     
     Created By: Yahoo Inc.
     
-    Link: https://developer.yahooinc.com/dsp/api/docs/traffic/targeting/weather-temperatures.html
+    Link: [https://developer.yahooinc.com/dsp/api/docs/traffic/targeting/weather-temperatures.html]
 
 2. OMDB Movie API
     
     Created By: Brian Fritz
     
-    Link: https://www.omdbapi.com/
+    Link: [https://www.omdbapi.com/]
 
 3. Autocomplete API
     
     Created By: Tuts Make
     
-    Link: https://www.tutsmake.com/google-places-autocomplete-fill-input-example-without-showing-map/
+    Link: [https://www.tutsmake.com/google-places-autocomplete-fill-input-example-without-showing-map/]
 
 ### Tutorials Followed
+Creating a Video Background: [https://blog.hubspot.com/website/video-background-css]
+
+Building a Modal with JS: [https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/]
 
 ## License
 
