@@ -9,8 +9,8 @@
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Source Code Pro', monospace;
     
-    --fw-reg: 300;
-    --fw-bold: 900;
+    --fw-reg: 200;
+    --fw-bold: 700;
     
     --clr-light: #fff;
     --clr-dark: #303030;
@@ -34,6 +34,21 @@
     }
 }
 
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+h2 { font-size: 3rem; }
+
 
 
 body {
@@ -41,29 +56,31 @@ background-color: grey;
 }
 
 
-.title {
-  display: flex;
-  justify-content: center;
+.home-title {
+  text-align: center;
   font-weight: var(--fw-bold);
   font-size: var(--fs-h2);
   font-family: var(--ff-primary);
-  color: var(--clr-dark);
+  color: var(--clr-light);
 }
 
+
+ .home-subtitle  {
+  text-align: center;
+  font-weight: var(--fw-reg);
+  font-size: var(--fs-h3);
+  font-family: var(--ff-primary);
+  color: var(--clr-light);
+ }
+
+
+ 
 .card-body {
   display: flex;
   justify-content: center;
   font-size: var(--fs-h3);
 
 }
-
- .Subtitle  {
-  display: flex;
-  justify-content: center;
-  font-family: var(--ff-primary);
-  color: var(--clr-accent);
- }
-
 
 .form-input {
   margin-left: 1em;
@@ -100,10 +117,11 @@ justify-content: center;
   display:none;
 }
 
+/* CSS for sample country cards (Japan, Spain, Mexico, India)*/
 .countriesContainer {
+  margin: 5em;
   display: flex;
   justify-content: space-between;
-  padding: 3em;
   flex-wrap: wrap;
   align-content: space-around;
 }
@@ -115,17 +133,42 @@ justify-content: center;
   align-items: center;
   width: 250px;
   height: 250px;
-  border: solid 3px black;
-  margin: 1em;
-  padding: 1em;
-  background-color: var(--clr-light);
-
 }
 
 .countriesImg {
   width:250px;
   height:250px;
+  border-radius: 15px;
 }
+
+.countriesCards span {
+    position: relative;
+    padding-left: 1em;
+    padding-right: 1em;
+    bottom: 10%;
+    left: 0%;
+    font-size: 24px;
+    color: var(--clr-light);
+    font-family: var(--ff-primary);
+    background-color: #13293d88;
+
+    
+}
+
+/* CSS for footer */
+footer {
+  text-align: center;
+  color: var(--clr-light);
+  margin-top: 10em;
+  font-family: var(--ff-primary);
+}
+
+footer img {
+  height: 40px;
+  vertical-align: middle;
+}
+
+
 
 /*Search page CSS*/ 
 
@@ -183,5 +226,80 @@ display: flexbox;
 border: var(--clr-accent);
 padding: 1em 2em;
 flex: 0 1 200px;
+
 font-family: var(--ff-primary);
+
+}
+
+/* MODAL */
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 450px;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.modal .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.btn-open {
+
+}
+
+.btn-close {
+  transform: translate(10px, -20px);
+  padding: 0.5rem 0.7rem;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.modal {
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+
 }
