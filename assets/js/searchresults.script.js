@@ -39,7 +39,7 @@ function getCurrentForecast(data) {
     var windspeed = data.current_observation.wind.speed
 
     getDescriptionEl.textContent = (text)
-    getTempEl.textContent = ("Temperature: " + temp + " °C")
+    getTempEl.textContent = ("Temperature: " + temp + " °F")
     getHumidityEl.textContent = ("Humidity: "+ humid + " %")
     getWindEl.textContent = ("Windspeed: "+ windspeed + " KPH")
 }
