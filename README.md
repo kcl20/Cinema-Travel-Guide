@@ -63,15 +63,21 @@ This app was made in collaboration with:
 The following API's were used in the creation of this app:
 
 1. Yahoo Weather API
+    
     Created By: Yahoo Inc.
+    
     Link: https://developer.yahooinc.com/dsp/api/docs/traffic/targeting/weather-temperatures.html
 
 2. OMDB Movie API
+    
     Created By: Brian Fritz
+    
     Link: https://www.omdbapi.com/
 
 3. Autocomplete API
+    
     Created By: Tuts Make
+    
     Link: https://www.tutsmake.com/google-places-autocomplete-fill-input-example-without-showing-map/
 
 ### Tutorials Followed
