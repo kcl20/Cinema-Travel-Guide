@@ -160,6 +160,12 @@ box-sizing: content-box;
 display: flexbox;
 border: var(--clr-accent);
 justify-content: center;
+font-family: var(--ff-secondary);
+}
+
+.weather_card, h3 {
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
 }
 
 .movies {
@@ -174,7 +180,8 @@ justify-content: center;
 .movieCards {
 background:#16e0bd;
 display: flexbox;
-border: var(--clr-accent)
+border: var(--clr-accent);
 padding: 1em 2em;
 flex: 0 1 200px;
+font-family: var(--ff-primary);
 }

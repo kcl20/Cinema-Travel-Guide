@@ -1,11 +1,48 @@
 var pageTitle = document.getElementById("title");
 pageTitle.textContent = "Showing results for " + localStorage.getItem("location");
 
+var getDescriptionEl = document.getElementById("weatherDescription")
+var getTempEl = document.getElementById("currentTemperature")
+var getHumidityEl = document.getElementById("currentHumidity")
+var getWindEl = document.getElementById("currentWindSpeed")
+
 var movieEl0 = document.getElementById("movie-0")
 var movieEl1 = document.getElementById("movie_1")
 var movieEl2 = document.getElementById("movie_2")
 
+function getWeatherApi () {
+    var locationRecall = localStorage.getItem("location");
+    console.log("accessing " + locationRecall) 
+    
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'e6a91df554msh34cf05f4cd6fe2bp1635b6jsn7f108847b7bf',
+            'X-RapidAPI-Host': 'yahoo-weather5.p.rapidapi.com'
+        }
+    };
 
+    fetch('https://yahoo-weather5.p.rapidapi.com/weather?location='+ locationRecall +'&format=json&u=f', options)
+    .then(response => response.json())
+	// .then(response => console.log(response))
+    .then(function (data){
+        console.log(data)
+	// .catch(err => console.error(err));
+
+    getCurrentForecast(data);
+})}
+
+function getCurrentForecast(data) {
+    var text = data.forecasts[0].text
+    var temp = data.current_observation.condition.temperature
+    var humid = data.current_observation.atmosphere.humidity
+    var windspeed = data.current_observation.wind.speed
+
+    getDescriptionEl.textContent = (text)
+    getTempEl.textContent = ("Temperature: " + temp + " °C")
+    getHumidityEl.textContent = ("Humidity: "+ humid + " %")
+    getWindEl.textContent = ("Windspeed: "+ windspeed + " KPH")
+}
 
 //fetch data from local storage, search OMDB API
 function getMovies() {
@@ -153,5 +190,6 @@ function getMovie3Info (imdbIDs) {
             console.log(movie3Info)
             });
 }
-// initialize function to lookup movies via API
+// initialize function to lookup movies and location via API
+getWeatherApi();
 getMovies();
