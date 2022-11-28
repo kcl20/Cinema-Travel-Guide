@@ -33,8 +33,6 @@ N/A
 
 ## Usage
 
-# --INSERT COMPLETED SCREENSHOTS
-
 When you open the app, you will find yourself on a search page. On this page, you have one of two choices:
 1) you can either choose a pre-selected destination, or 
 2) you can type in a destination of your choice. 
