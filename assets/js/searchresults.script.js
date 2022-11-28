@@ -49,7 +49,7 @@ function getMovies() {
     var locationInputRecall = localStorage.getItem("location");
     console.log("retrieving " + locationInputRecall)
 
-    var requestMovieUrl = "http://www.omdbapi.com/?s=" + locationInputRecall + "&apikey=dacedb99"  
+    var requestMovieUrl = "https://www.omdbapi.com/?s=" + locationInputRecall + "&apikey=dacedb99"  
 
     fetch(requestMovieUrl)
         .then(function (response) {
@@ -138,7 +138,7 @@ function setupModal(imdbIDs) {
     const openModal0 = function () {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
-        var requestMovie0PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[0] + "&full&apikey=dacedb99"
+        var requestMovie0PlotUrl = "https://www.omdbapi.com/?i=" + imdbIDs[0] + "&full&apikey=dacedb99"
         fetch(requestMovie0PlotUrl)
                 .then(function (response) {
                     return response.json();
@@ -155,7 +155,7 @@ function setupModal(imdbIDs) {
     const openModal1 = function () {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
-        var requestMovie1PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[1] + "&full&apikey=dacedb99"
+        var requestMovie1PlotUrl = "https://www.omdbapi.com/?i=" + imdbIDs[1] + "&full&apikey=dacedb99"
         fetch(requestMovie1PlotUrl)
                 .then(function (response) {
                     return response.json();
@@ -172,7 +172,7 @@ function setupModal(imdbIDs) {
     const openModal2 = function () {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
-        var requestMovie2PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[2] + "&full&apikey=dacedb99"
+        var requestMovie2PlotUrl = "https://www.omdbapi.com/?i=" + imdbIDs[2] + "&full&apikey=dacedb99"
         fetch(requestMovie2PlotUrl)
                 .then(function (response) {
                     return response.json();
