@@ -208,5 +208,5 @@ function setupModal(imdbIDs) {
 //     var requestMovie1PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[0] + "&full&apikey=dacedb99"
     
 getMovies();
-
+getWeatherApi (); 
 
