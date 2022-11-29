@@ -32,6 +32,7 @@ function getWeatherApi () {
     getCurrentForecast(data);
 })}
 
+// display current weather based on first result from Yahoo Weather API response
 function getCurrentForecast(data) {
     var text = data.forecasts[0].text
     var temp = data.current_observation.condition.temperature
@@ -63,7 +64,7 @@ function getMovies() {
 }
 
 
-// populate elements with first 3 elements from data returned in OMDB API response
+// populate movie card elements with first 3 results from data returned in OMDB API response
 function loadMovies(data) {
 
     movieEl0.textContent = data.Search[0].Title
@@ -94,7 +95,7 @@ function loadMovies(data) {
 }
 
 
-
+// add three buttons to open modal
 function setupModal(imdbIDs) {
 
     var movie0Button = document.createElement("button");
@@ -135,6 +136,8 @@ function setupModal(imdbIDs) {
     var plot = document.getElementById("plot");
     const closeModalBtn = document.querySelector(".btn-close");
 
+
+    // buttons to open modal by changing classes, and populate modal with data from OMDB API response to search by imdb ID
     const openModal0 = function () {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
@@ -152,6 +155,7 @@ function setupModal(imdbIDs) {
     };
     movie0Button.addEventListener("click", openModal0);
 
+// buttons to open modal by changing classes, and populate modal with data from OMDB API response to search by imdb ID
     const openModal1 = function () {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
@@ -169,6 +173,7 @@ function setupModal(imdbIDs) {
     }
     movie1Button.addEventListener("click", openModal1);
 
+// buttons to open modal by changing classes, and populate modal with data from OMDB API response to search by imdb ID
     const openModal2 = function () {
         modal.classList.remove("hidden");
         overlay.classList.remove("hidden");
@@ -187,10 +192,6 @@ function setupModal(imdbIDs) {
     movie2Button.addEventListener("click", openModal2);
 
 
-
-
-
-
     const closeModal = function () {
         modal.classList.add("hidden");
         overlay.classList.add("hidden");
@@ -199,14 +200,14 @@ function setupModal(imdbIDs) {
     closeModalBtn.addEventListener("click", closeModal);
 
 
-
-
     
     }
 
 // function getMovie1Info (imdbIDs) {
 //     var requestMovie1PlotUrl = "http://www.omdbapi.com/?i=" + imdbIDs[0] + "&full&apikey=dacedb99"
-    
+
+
+// initiate functions upon load
 getMovies();
 getWeatherApi (); 
 

@@ -1,6 +1,7 @@
 var errorMessageEl = document.getElementById("errorMessage");
 var button = document.getElementById("submit");
 
+// button listener for submit button
 button.addEventListener('click', validateLocation);
 
 
@@ -25,14 +26,14 @@ function validateLocation () {
 }
 
 
-
+// change page to search results page
 function redirectSearchResults () {
     var searchResultsURL = './searchresults.html' + '?location=' + localStorage.getItem("location");
     console.log("redirecting");
     document.location.replace(searchResultsURL);
 }
 
-
+// if country cards are clicked, save the country to local storage and redirect to search results page
 var Spain = document.getElementById("Spain");
 Spain.addEventListener('click', function() {
     localStorage.setItem("location", "Spain");
